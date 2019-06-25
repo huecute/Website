@@ -1,0 +1,2 @@
+The features included in these files are pop-ups, buttons lists, stopwatch setting on clicking a button, appearing and reappearing assets.
+The supporting javascript file is also contained within the HTML file since for some reason my IDE was unsupportive of sepearting the two files.
