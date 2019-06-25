@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body {
+	background-image: url("Background.jpg"); /*Credit goes to freepic.com for background water color.*/
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	background-color: #333;
+	width: 100%;
+	margin-left:  -20px;
+	margin-right: -20px;
+	padding-left: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+li a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #111;
+}
+
+li c{
+	list-style-type:disc
+}
+
+.active {
+	background-color: #333;
+}
+
+aside {
+	float: right;
+	width: 20%;
+	height: 1000px; /* only for demonstration, should be removed */
+	background: #ccc;
+	padding-top: 100px;
+
+}
+
+/* Style the list inside the menu */
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+article {
+	float: left;
+	width: 80%;
+	background-color: #f1f1f1;
+	height: 1000px; /* only for demonstration, should be removed */
+	padding-top: 100px;
+}
+
+/* Clear floats after the columns */
+section:after {
+	content: "";
+	display: table;
+	clear: both;	
+}
+
+section{
+	padding-right: 250px;
+	padding-left: 300px;
+	border-radius: 5px;
+}
+
+footer {
+	float: center;
+	background-color: #333;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	padding-left: 40px;
+	height: 50px;
+	margin-left:  -20px;
+	margin-right: -20px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+div.b {
+  text-align: center;
+}
+
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  width: 150px;
+  display: block;
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<ul>
+		<li><a href="Home.htm">Home</a></li>
+		<li style="float:right; padding-right: 40px";><a class="active" href="Contact.htm">Contact</a></li>
+	</ul>
+</header>
+
+<section>
+<div class ="b">
+	<article>
+		<button id = "start" onclick="countdown();">Start</button>
+		<p id ="demo"></p>
+		<form id="form" action="" method="post">
+			<p>"What is the code to the correct key?"</p>
+			<input type="text" name="inputText"/>
+			<input type="submit" name="SubmitButton"/>
+		</form>
+	</article>
+	<aside>
+	<div id ="Keys" class="btn-group";>
+		<button class="button" onclick="giveCode(1);">Key1</button>
+		<button class="button" onclick="giveCode(2);">Key2</button>
+		<button class="button" onclick="giveCode(3);">Key3</button>
+		<button class="button" onclick="giveCode(4);">Key4</button>
+		<button class="button" onclick="giveCode(5);">Key5</button>
+		<button class="button" onclick="giveCode(6);">Key6</button>
+		<button class="button" onclick="giveCode(7);">Key7</button>
+		<button class="button" onclick="giveCode(8);">Key8</button>
+		<button class="button" onclick="giveCode(9);">Key9</button>
+		<button class="button" onclick="giveCode(10);">Key10</button>
+		<button class="button" onclick="giveCode(11);">Key11</button>
+		<button class="button" onclick="giveCode(12);">Key12</button>
+		<button class="button" onclick="giveCode(13);">Key13</button>
+		<button class="button" onclick="giveCode(14);">Key14</button>
+		<button class="button" onclick="giveCode(15);">Key15</button>
+		<button class="button" onclick="giveCode(16);">Key16</button>
+		<button class="button" onclick="giveCode(17);">Key17</button>
+		<button class="button" onclick="giveCode(18);">Key18</button>
+		<button class="button" onclick="giveCode(19);">Key19</button>
+		<button class="button" onclick="giveCode(20);">Key20</button>
+	</div>
+	</aside>
+</div>
+</section>
+
+<footer style="color: white">
+	<li><a href="#home">LinkedIn</a></li>
+
+</footer>
+</body>
+
+<script type="text/javascript">
+function countdown(){
+// Set the date we're counting down to
+var countDownDate = new Date().getTime() + 100000;
+ reveal("Keys");
+ reveal("form");
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = 
+  minutes + "m " + seconds + "s ";
+  
+
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+document.getElementById('start').remove();
+}
+
+function startSetting(){
+var x = document.getElementById("Keys");
+var y = document.getElementById("form");
+x.style.display = "none";
+y.style.display = "none";
+}
+
+function reveal(thing) {
+  var x = document.getElementById(thing);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function giveCode(buttonNum){
+	switch(buttonNum){
+		case 1:
+			alert("Your code is 7178");
+			break;
+		case 2:
+			alert("Your code it 8824");
+			break;
+		case 3:
+			alert("Your code is 0892");
+			break;
+		case 4:
+			alert("Your code it 4672");
+			break;	
+		case 5:
+			alert("Your code is 4519");
+			break;
+		case 6:
+			alert("Your code it 5317");
+			break;
+		case 7:
+			alert("Your code is 5953");
+			break;
+		case 8:
+			alert("Your code it 1548");
+			break;
+		case 9:
+			alert("Your code is 2565");
+			break;
+		case 10:
+			alert("Your code it 9146");
+			break;
+		case 11:
+			alert("Your code is 3677");
+			break;
+		case 12:
+			alert("Your code it 0574");
+			break;	
+		case 13:
+			alert("Your code is 2122");
+			break;
+		case 14:
+			alert("Your code it 8583");
+			break;
+		case 15:
+			alert("Your code is 4172");
+			break;
+		case 16:
+			alert("Your code it 7380");
+			break;	
+		case 17:
+			alert("Your code is 5438");
+			break;
+		case 18:
+			alert("Your code it 9263");
+			break;
+		case 19:
+			alert("Your code is 3562");
+			break;
+		case 20:
+			alert("Your code it 0837");
+			break;	
+	}			
+}
+
+startSetting();
+
+</script>
+
+</html>
+
+
