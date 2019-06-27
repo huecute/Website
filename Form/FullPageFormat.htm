@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header{
+	position: absolute; top: 0; width: 100%; 
+}
+ul {
+	list-style-type: none; margin: 0; overflow: hidden; background-color: #333;
+	padding-left: 50px; height: 50px;
+}
+body{
+	margin:0; padding:0;
+}
+.content{
+	background:white; width:100%; height:700px;
+}
+#footer{    
+	background: #f1f1f1; height:250px; padding-left: 50px;
+}
+#bottom-footer{
+	background: #D4D2D6; height:70px; padding-left: 50px; 
+}
+
+.column {
+  float: left; width: 20%; padding: 10px;
+}
+
+.row:after {
+	content: ""; display: table; clear: both;
+}
+
+footer{
+	width: 100%;
+}
+section:after {
+	content: ""; display: table; clear: both;	
+}
+section{
+	padding-right: 200px; padding-left: 200px;
+}
+article {
+	float: left;width: 100%;background-color: purple; height: 700px; border-radius: 5px; padding: 50px;
+}
+li a {
+	float: left; display: block; text-align: center; padding: 14px 16px; text-decoration: none; color: white;
+}
+li c {
+	float: left; display: block; text-align: center; padding: 14px 16px; text-decoration: none; color: black;
+}
+.search-container {
+  float: right; padding: 6px 10px; margin-top: 6px; margin-right: 14px;
+}
+
+</style>
+
+
+<body>
+<header>
+	<ul>
+		<li><a href="Home.htm">Home</a></li>
+		<li><a href="Experience.htm">Experience</a></li>
+		<li><a href="Education.htm">Education</a></li>
+		<li><a href="Projects.htm">Projects</a></li>
+		<li><a href="Skills.htm">Skills</a></li>
+		<li style="float:right; padding-right: 20px";><a class="active" href="Contact.htm">Contact</a></li>
+
+		<div class="search-container">
+			<form action="/action_page.php">
+				<input type="text" placeholder="Search.." name="search">
+			</form>
+		</div>
+	</ul>
+</header>
+<section>
+<article>
+		<h1>Hello</h1>
+		<p>Bye</p>
+</article>
+</section>
+<footer>
+  <div id="footer">
+	<div class="row">
+		<div class="column">
+			<h3>Help & Info</h2>
+			<p>Some text..</p>
+		</div>
+		<div class="column">
+			<h3>About Store</h2>
+			<p>Some text..</p>
+		</div>
+		<div class="column">
+			<h3>More</h2>
+			<p>Some text..</p>
+		</div>
+  </div>
+  </div>
+  
+  
+  
+   <div id="bottom-footer">
+    <div class = "inner-wrap clearfix" style ="list-style-type: none";>
+		<li><c href="Home.htm">Home</a></li>
+    		<li style="float:right; padding-right: 40px";><c class="active" href="Contact.htm"><img src="Facebook.png" width="30px" height="30px"></a></li>
+		<li style="float:right; padding-right: 20px";><c class="active" href="Contact.htm"><img src="Snapchat.png" width="30px" height="30px"></a></li>
+		<li style="float:right; padding-right: 20px";><c class="active" href="Contact.htm"><img src="Twitter.png" width="30px" height="30px"></a></li>
+
+    </div>
+   
+  </div>
+ 
+</footer>
+
+</body>
+</html>
